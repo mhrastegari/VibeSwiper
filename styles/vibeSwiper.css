@@ -1,0 +1,110 @@
+﻿.main-swiper {
+  width: 100%;
+  display: grid;
+  position: relative;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  will-change: transform;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+
+.items::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.items:active {
+  cursor: grabbing;
+}
+
+.btn {
+  z-index: 1;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  margin: 0 5px 30px;
+  position: absolute;
+  align-self: center;
+  vertical-align: middle;
+}
+
+.prev {
+  justify-self: flex-start;
+}
+
+.next {
+  justify-self: flex-end;
+}
+
+.item {
+  margin: 24px;
+  height: 155px;
+  display: grid;
+  max-width: 150px;
+  transition: 0.2s;
+  position: relative;
+  justify-items: center;
+  justify-content: center;
+}
+
+.item:hover {
+  transform: scale(1.08);
+}
+
+.item-circle {
+  width: 110px;
+  height: 110px;
+  align-self: center;
+  border-radius: 55px;
+  justify-self: center;
+  justify-content: center;
+  box-shadow: 0px 2px 10px rgba(21, 34, 80, 0.15);
+}
+
+.item-img {
+  padding: 0;
+  height: 102px;
+  margin-top: -8px;
+  position: absolute;
+  justify-self: center;
+  pointer-events: none !important;
+}
+
+.item-text {
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 48em) {
+  .items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
+
+  .items:active {
+    cursor: auto;
+  }
+
+  .item {
+    max-width: 110px;
+  }
+
+  .btn {
+    display: none !important;
+  }
+}
