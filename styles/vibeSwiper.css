@@ -36,7 +36,7 @@
   padding: 0;
   width: 44px;
   height: 44px;
-  margin: 0 5px 30px;
+  margin: 0 5px;
   position: absolute;
   align-self: center;
   vertical-align: middle;
@@ -87,25 +87,4 @@
 .item-text {
   margin: 0;
   text-align: center;
-}
-
-/* you can optionally delete/have these in your code */
-@media screen and (max-width: 48em) {
-  .items {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto;
-  }
-
-  .items:active {
-    cursor: auto;
-  }
-
-  .item {
-    max-width: 110px;
-  }
-
-  .btn {
-    display: none !important;
-  }
 }

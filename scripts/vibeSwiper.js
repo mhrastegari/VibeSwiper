@@ -15,7 +15,7 @@ function showHideButtons() {
     const swiperWidth = swiper.scrollWidth;
     const mainWidth = main.getBoundingClientRect().width;
 
-    if (swiperWidth > mainWidth && swiper.style.display != "grid") {
+    if (swiperWidth > mainWidth) {
 
         if (swiper.clientWidth + swiper.scrollLeft >= swiper.scrollWidth - 2) {
             next.style.visibility = "hidden";
@@ -27,15 +27,9 @@ function showHideButtons() {
             next.style.visibility = "visible";
             prev.style.visibility = "visible";
         }
-
-        next.style.display = "block";
-        prev.style.display = "block";
         swiper.style.justifyContent = "start";
     }
     else {
-        next.style.display = "none";
-        prev.style.display = "none";
-        swiper.style.margin = "0";
         swiper.style.justifyContent = "center";
     }
 }
