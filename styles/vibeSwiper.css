@@ -89,6 +89,7 @@
   text-align: center;
 }
 
+/* you can optionally delete/have these in your code */
 @media screen and (max-width: 48em) {
   .items {
     display: grid;
